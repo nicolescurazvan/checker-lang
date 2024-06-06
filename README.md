@@ -4,7 +4,7 @@ This is an esoteric programming language that, together with the interpreter
 can be used for testing programs.
 It can create input and output files, check programs and measure the time of
 execution. It can also do basic mathematical calculations and generate random
-numbers. The source code files can be identified by the extension '*.cklg'.
+numbers. The source code files can be identified by the extension `*.cklg`.
 
 ## Data types
 
@@ -62,14 +62,12 @@ Comments are like in C (`//` for single-line comments, `/*` for multiline commen
 ### Variables
 
 Variables are declared as:
-'''[code]
-int x = 50;
-'''
+`int x = 50;`
 
 ### If statements
 
-'if' statements are declared like this:
-'''[code]
+`if` statements are declared like this:
+```
 if (x % 2 == 0) {
     // Code
 } elif (x % 3 == 2) {
@@ -77,55 +75,56 @@ if (x % 2 == 0) {
 } else {
     // Code
 }
+```
 
 ### For loops
 
-'for' loops can be C-style or have ranges. They are declared like this:
-'''[code]
+`for` loops can be C-style or have ranges. They are declared like this:
+```
 for (i = 0; i != 10; i++) {
     // Code
 }
-'''
+```
 
 or
 
-'''[code]
+```
 for (int x: vector) {
     // Code
 }
-'''
+```
 
 ### While loops
 
-'while' loops are declared like in C:
-'''[code]
+`while` loops are declared like in C:
+```
 while (i > 10) {
     // Code
 }
-'''
+```
 
 ### Functions
 
 Functions are declared like in C:
-'''[code]
+```
 int foo(int x, int y, string s) {
     // Code
 }
-'''
+```
 
-Every program must have a 'main' function, of type void.
+Every program must have a `main` function, of type `void`.
 
 ## Keywords
 
-- Variable types, like 'int', 'float' or 'string'
-- 'true' and 'false'
-- 'main'
-- 'import'
+- Variable types, like `int`, `float` or `string`
+- `true` and `false`
+- `main`
+- `import`
 - The names of the basic functions mentioned below
 
 ## Basic functions
 
-- 'read', for reading variables from the console or from a file
-- 'write', for writing variables to the console or to a file
-- 'open', for opening a file
-- 'close', for closing a file
+- `read`, for reading variables from the console or from a file
+- `write`, for writing variables to the console or to a file
+- `open`, for opening a file
+- `close`, for closing a file
