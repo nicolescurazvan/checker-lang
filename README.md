@@ -13,7 +13,7 @@ numbers. The source code files can be identified by the extension `*.cklg`.
 - `string`, representing ASCII strings.
 - `bool`, representing boolean data ('true' or 'false').
 - `array`, representing fixed length arrays.
-- `[T]`, for variable length arrays of type 'T'.
+- `[T]`, for variable length arrays (lists) of type `T`.
 - `file`, representing a file object.
 
 ## Operations
@@ -112,19 +112,59 @@ int foo(int x, int y, string s) {
 }
 ```
 
-Every program must have a `main` function, of type `void`.
+Every program must have a `main` function, of type `void`. It takes
+an integer (`argc`) and a list of strings (`argv`) as arguments. They
+are optional.
 
 ## Keywords
 
 - Variable types, like `int`, `float` or `string`
+- `void`
 - `true` and `false`
 - `main`
+- `return`
 - `import`
 - The names of the basic functions mentioned below
 
 ## Basic functions
 
 - `read`, for reading variables from the console or from a file
+- `readline`, for reading an entire line from the console or from a file
 - `write`, for writing variables to the console or to a file
+- `writeline`, for writing an entire line from the console or from a file
 - `open`, for opening a file
 - `close`, for closing a file
+
+## Examples
+
+### Swap two numbers read from the console
+
+```
+void main() {
+    int a, b;
+    read(stdin, a);
+    read(stdin, b);
+    int c = b;
+    b = a;
+    a = c;
+    write(stdout, a + " " + b);
+}
+```
+
+### Merge two text files given as arguments and display the result
+
+```
+void main(int argc, [string] argv) {
+    file f = open(argv[1], "t");
+    file g = open(argv[2], "t");
+    string str;
+    while (readline(f, str)) {
+        writeline(stdout, str);
+    }
+    while (readline(g, str)) {
+        writeline(stdout, str);
+    }
+    close(f);
+    close(g);
+}
+```
