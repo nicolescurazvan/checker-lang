@@ -8,56 +8,56 @@ numbers. The source code files can be identified by the extension '*.cklg'.
 
 ## Data types
 
-- 'int', representing 64-bit integers.
-- 'float', representing 64-bit floating-point numbers.
-- 'string', representing ASCII strings.
-- 'bool', representing boolean data ('true' or 'false').
-- 'array', representing fixed length arrays.
-- '[T]', for variable length arrays of type 'T'.
-- 'file', representing a file object.
+- `int`, representing 64-bit integers.
+- `float`, representing 64-bit floating-point numbers.
+- `string`, representing ASCII strings.
+- `bool`, representing boolean data ('true' or 'false').
+- `array`, representing fixed length arrays.
+- `[T]`, for variable length arrays of type 'T'.
+- `file`, representing a file object.
 
 ## Operations
 
-On 'int' values:
+On `int` values:
 
-- 'a + b', for addition
-- 'a - b', for subtraction
-- 'a * b', for multiplication
-- 'a / b', for division
-- 'a % b', for remainder
-- 'a ** b', for power
-- 'a & b', for bitwise AND
-- 'a | b', for bitwise OR
-- '~a', for bitwise NOT
-- 'a ^ b', for bitwise XOR
+- `a + b`, for addition
+- `a - b`, for subtraction
+- `a * b`, for multiplication
+- `a / b`, for division
+- `a % b`, for remainder
+- `a ** b`, for power
+- `a & b`, for bitwise AND
+- `a | b`, for bitwise OR
+- `~a`, for bitwise NOT
+- `a ^ b`, for bitwise XOR
 
-On 'float' values:
+On `float` values:
 
-- 'a + b', for addition
-- 'a - b', for subtraction
-- 'a * b', for multiplication
-- 'a / b', for division
-- 'a ** b', for power
+- `a + b`, for addition
+- `a - b`, for subtraction
+- `a * b`, for multiplication
+- `a / b`, for division
+- `a ** b`, for power
 
-The 'float' operations support combinations of 'float' and 'int' values, returning
-'float' values.
+The `float` operations support combinations of `float` and `int` values, returning
+`float` values.
 
-On 'string' values:
+On `string` values:
 
-- 'a + b', for concatenation (one of the terms can be 'int' or 'float')
-- 'a * b', where 'b' is an 'int' value, for repeating the string
+- `a + b`, for concatenation (one of the terms can be `int` or `float`)
+- `a * b`, where `b` is an `int` value, for repeating the string
 
-On 'bool' values:
+On `bool` values:
 
-- 'a && b', for AND
-- 'a || b', for OR
-- '~a', for NOT
-- 'a ^ b', for XOR
+- `a && b`, for AND
+- `a || b`, for OR
+- `~a`, for NOT
+- `a ^ b`, for XOR
 
 ## Syntax
 
-The language is statically typed and the instructions end with ';'.
-Comments are like in C ('//' for single-line comments, '/*' for multiline comments).
+The language is statically typed and the instructions end with `;`.
+Comments are like in C (`//` for single-line comments, `/*` for multiline comments).
 
 ### Variables
 
